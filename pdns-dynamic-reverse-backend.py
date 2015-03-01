@@ -162,7 +162,7 @@ def readXML():
 	del NEWRANGES[:]
 	lock.acquire()
 	error=0
-	tree = ET.parse('/home/sebastian/Dokumente/dns2.xml')
+	tree = ET.parse('config.xml')
 	root = tree.getroot()
 	for net in root:
 	 #parts=[]# TODO
