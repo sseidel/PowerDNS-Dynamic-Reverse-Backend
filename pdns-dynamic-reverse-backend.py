@@ -52,6 +52,7 @@ from thread import start_new_thread, allocate_lock
 syslog.openlog('/etc/powerdns/log',0, syslog.LOG_LOCAL4)
 syslog.syslog('starting up')
 
+CONFIGFILE='/etc/powerdns/config.xml'
 DNS    = 'mandelbrot.zaphods.net'  # this nameserver
 EMAIL  = 'zaphodb.zaphods.net'  # this nameserver administrator
 TTL    = 300                    # time to live
@@ -162,7 +163,7 @@ def readXML():
 	del NEWRANGES[:]
 	lock.acquire()
 	error=0
-	tree = ET.parse('config.xml')
+	tree = ET.parse(CONFIGFILE)
 	root = tree.getroot()
 	for net in root:
 	 #parts=[]# TODO
