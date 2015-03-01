@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<root>
+
+	<net>
+		<prefix>2001:db8::</prefix>
+		<prefix-len>64</prefix-len>
+		<forward>ipv6.example.com</forward>
+		<dns>ns1.example.com</dns>
+		<mail>mail.example.com</mail>
+		<ttl>300</ttl>
+		<nameserver>ns1.example.com,ns2.example.com</nameserver>
+	</net>
+<net>
+		<prefix>192.0.2.0</prefix>
+		<prefix-len>24</prefix-len>
+		<forward>ipv4.example.com</forward>
+		<dns>ns3.example.com</dns>
+		<mail>hostmaster.resolvt.net</mail>
+		<ttl>300</ttl>
+		<nameserver>ns3.example.com,ns4.example.com</nameserver>
+	</net>
+</root>
