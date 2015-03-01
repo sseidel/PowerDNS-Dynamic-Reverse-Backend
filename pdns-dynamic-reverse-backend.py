@@ -7,8 +7,11 @@ forward lookup.
 pdns.conf example:
 
 launch=pipe
-pipe-command=/usr/local/sbin/pipe-local-ipv6-wrapper
+pipe-command=/etc/powerdns/pdns-dynamic-reverse-backend.py
 pipe-timeout=500
+
+#
+copy pdns-dynamic-reverse-backend.py and config.xml to /etc/powerdns/
 
 ### LICENSE ###
 
